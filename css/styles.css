@@ -1,0 +1,169 @@
+html {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    font-family: Helvetica, sans-serif, Regular, Arial;
+}
+.row {
+    /*border: 1px solid red;*/
+    margin: 0;
+}
+
+#menu-line {
+    /*position: fixed;*/
+    z-index: 1;
+    /*width: 97.5%;*/
+    /*height: 150px;*/
+    /*border: 1px solid #000000;*/
+    padding: 0;
+}
+
+#logo {
+    height: 150px;
+    padding: 50px;
+    background: -webkit-gradient(linear, left top, right top, from(#2a5198), to(#603f97)); /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-linear-gradient(left, #603f97, #2a5198); /* Safari 5.1, Chrome 10+ */
+    background: -moz-linear-gradient(left, #603f97, #2a5198); /* Firefox 3.6+ */
+    background: -ms-linear-gradient(left, #603f97, #2a5198); /* IE 10 */
+    background: -o-linear-gradient(left, #603f97, #2a5198); /* Opera 11.10+ */
+}
+
+img {
+    float: left;
+}
+
+img + p {
+    float: left;
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+}
+
+#menu {
+    height: 100px;
+    margin: 25px 0;
+    padding: 30px 0 20px;
+    color: #ffffff;
+    text-align: right;
+    background: -webkit-gradient(linear, left top, right top, from(#667ee9), to(#7458b4)); /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-linear-gradient(left, #7458b4, #667ee9); /* Safari 5.1, Chrome 10+ */
+    background: -moz-linear-gradient(left, #7458b4, #667ee9); /* Firefox 3.6+ */
+    background: -ms-linear-gradient(left, #7458b4, #667ee9); /* IE 10 */
+    background: -o-linear-gradient(left, #7458b4, #667ee9); /* Opera 11.10+ */
+}
+
+ul.links {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+}
+
+ul.links li {
+    display: inline;
+    margin-right: 5px;
+    padding: 3px;
+}
+
+ul.links li a {
+    color: white;
+}
+
+ul.links li a:active, ul.links li a:hover {
+    border-top: 1px solid #ffffff;
+    text-decoration: none;
+}
+
+.contacts p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.lang li {
+    display: inline;
+    color: white;
+}
+
+div.lang li a.active {
+    border: 1px solid #ffffff;
+}
+
+li a {
+    color: white
+}
+
+#page-1 {
+    /*height: 100px;*/
+    /*width: 100%;*/
+    text-align: right;
+    padding:0;
+}
+#col1 {
+    /*background-color: dodgerblue;*/
+    /* height: 400px; */
+    z-index: -1;
+    margin: -155px 0;
+    padding: 200px 30px;
+    background: -webkit-gradient(linear, left top, right bottom, from(#85d6d0), to(#714ee3));
+    background: -webkit-linear-gradient(left top, #714ee3, #85d6d0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #714ee3, #85d6d0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #714ee3, #85d6d0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #714ee3, #85d6d0); /* Standard syntax */
+}
+
+#col2 {
+    /*top: 120px;*/
+    /*background-color: blueviolet;*/
+    height: auto;
+    padding: 0;
+    margin-top: -30px;
+}
+
+/*----- begin carousel --------*/
+#myCarousel {
+    width: 100%;
+    height: auto;
+    z-index: -10;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+    height: 510px;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -15%;
+    text-align: right;
+    list-style: none;
+}
+
+/*----- end carousel --------*/
+
+.button {
+    background: #16143b;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    color: white;
+    font-size: 14pt;
+    margin: 350px 470px;
+    z-index: 10;
+    text-align: center;
+    padding: 12px;
+    font-weight: 100;
+}
