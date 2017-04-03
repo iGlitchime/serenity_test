@@ -14,6 +14,8 @@
     <!--[if lt IE 9]>
     <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <!--[endif]-->
 </head>
@@ -21,20 +23,21 @@
 <!--<h1>Привет, мир!</h1>-->
 <div class="container" id="menu-line">
     <div class="row">
-        <div class="col-md-3" id="logo">
+        <div class="col-xs-7 col-md-3 " id="logo">
             <img src="http://loremflickr.com/50/50?random=1" alt="logo"/>
 
             <p>Пять Пи</p>
         </div>
-        <div class="col-md-9" id="menu">
+        <div class="col-xs-5 col-md-9" id="menu">
+            <div class="mob-menu" id="mobMenu"></div>
             <div class="row">
                 <div class="col-md-6 links-menu">
-                    <ul class="links">
-                        <li><a href="">Услуги</a></li>
-                        <li><a href="">Стоимость</a></li>
-                        <li><a href="">Почему Мы</a></li>
-                        <li><a href="">Контакты</a></li>
-                        <li><a href="">Стоимость</a></li>
+                    <ul class="links" id="links">
+                        <li><a href="#page-2" class="scrollto">Услуги</a></li>
+                        <li><a href="" class="scrollto">Стоимость</a></li>
+                        <li><a href="" class="scrollto">Почему Мы</a></li>
+                        <li><a href="" class="scrollto">Контакты</a></li>
+                        <li><a href="" class="scrollto">Стоимость</a></li>
                     </ul>
                 </div>
                 <div class="col-md-offset-1 col-md-3 contacts">
@@ -54,13 +57,8 @@
 </div>
 <div class="container" id="page-1">
     <div class="row">
-        <div class="col-md-6" id="col1">
-            <h1>Организация и сопровождение участия в выставке "под ключ"</h1>
 
-            <p>Берём на себя рутину по подготовке к выставке, чтобы вы могли сорседоточиться на достижении поставленных
-                целей</p>
-        </div>
-        <div class="col-md-6" id="col2">
+        <div class="col-xs-12 col-md-6" id="col2">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -95,22 +93,28 @@
         <div class="button">
             <p>Получить предложение</p>
         </div>
+        <div class="col-xs-12 col-md-6" id="col1">
+            <h1>Организация и сопровождение участия в выставке "под ключ"</h1>
+
+            <p>Берём на себя рутину по подготовке к выставке, чтобы вы могли сорседоточиться на достижении поставленных
+                целей</p>
+        </div>
     </div>
 </div>
 <div class="container" id="page-2">
     <div class="row">
-        <div class="col-md-3"><h1>Мы предлагаем</h1></div>
-        <div class="col-md-1">
+        <div class="col-xs-12 col-md-3"><h1>Мы предлагаем</h1></div>
+        <div class="hidden-sm hidden-xs col-md-1">
             <div class="line">DRAW THE LINE</div>
         </div>
         <div class="col-md-7">
-            <p>Полный комплекс услугв выставке: с момента выбора подходящего мероприятия до оценки
+            <p>Полный комплекс услуг в выставке: с момента выбора подходящего мероприятия до оценки
                 результатов участия</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <div class="offer-block-one">
+        <div class="hidden-sm hidden-xs col-md-4">
+            <div class="offer-block-one" id="offer1">
                 <img src="http://loremflickr.com/300/200?random=6" alt="подбор мероприятия"/>
                 <div class="number-bg">1</div>
                 <div class="content">
@@ -122,8 +126,8 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="offer-block-one hidden">
+        <div class="hidden-sm hidden-xs col-md-4">
+            <div class="offer-block-one active"  id="offer2-1">
                 <img src="http://loremflickr.com/300/200?random=7" alt="подбор мероприятия"/>
                 <div class="number-bg">2</div>
                 <div class="content">
@@ -133,11 +137,11 @@
                         выставочного
                         центра</p>
                 </div>
-                <a href="#">
-                    <div class="info-more">+</div>
-                </a>
+                <!--<a id="showMore">-->
+                    <div class="info-more" id="showMore">+</div>
+                <!--</a>-->
             </div>
-            <div class="offer-block-two active">
+            <div class="offer-block-two hidden"  id="offer2-2">
                 <h2>Дизайн и застройка стенда</h2>
                 <div class="points">
                     <ul>
@@ -147,12 +151,12 @@
                         <li>Предоставляем техническую поддержку на время работы выставки</li>
                     </ul>
                 </div>
-                <a href="#">
-                    <div class="info-more">-</div>
-                </a>
+                <!--<a id="showLess">-->
+                    <div class="info-more" id="showLess">-</div>
+                <!--</a>-->
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="hidden-sm hidden-xs col-md-4">
             <div class="offer-block-one">
                 <img src="http://loremflickr.com/300/200?random=8" alt="подбор мероприятия"/>
 
@@ -169,14 +173,55 @@
                 <div class="info-more show">+</div>
             </a>
         </div>
+        <div class="visible-xs-12">
+            <div id="xsCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#xsCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#xsCarousel" data-slide-to="1"></li>
+                    <li data-target="#xsCarousel" data-slide-to="2"></li>
+                    <li data-target="#xsCarousel" data-slide-to="3"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                        <div class="offer-block-one" id="offer1">
+                            <img src="http://loremflickr.com/200/150?random=6" alt="подбор мероприятия"/>
+                            <div class="number-bg">1</div>
+                            <div class="content">
+                                <h2>Подбор мероприятия</h2>
+                                <p>Находим подходщие выставки, бронируем площади, оформляем все документы</p>
+                            </div>
+                            <a href="#">
+                                <div class="info-more show">+</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="http://loremflickr.com/584/500?random=3" alt="Chania">
+                    </div>
+
+                    <div class="item">
+                        <img src="http://loremflickr.com/584/500?random=4" alt="Flower">
+                    </div>
+
+                    <div class="item">
+                        <img src="http://loremflickr.com/584/500?random=5" alt="Flower">
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!--<script src="js/bootstrap.min.js"></script>-->
 </body>

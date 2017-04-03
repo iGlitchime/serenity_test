@@ -4,6 +4,7 @@ html {
     height: 100%;
     width: 100%;
 }
+
 body {
     position: absolute;
     top: 0;
@@ -14,6 +15,7 @@ body {
     color: white;
     font-family: Helvetica, sans-serif, Regular, Arial;
 }
+
 .row {
     margin: 0;
 }
@@ -55,6 +57,10 @@ img + p {
     background: -moz-linear-gradient(left, #7458b4, #667ee9); /* Firefox 3.6+ */
     background: -ms-linear-gradient(left, #7458b4, #667ee9); /* IE 10 */
     background: -o-linear-gradient(left, #7458b4, #667ee9); /* Opera 11.10+ */
+}
+
+.mob-menu {
+    display: none;
 }
 
 ul.links {
@@ -99,8 +105,9 @@ li a {
     /*height: 100px;*/
     /*width: 100%;*/
     text-align: right;
-    padding:0;
+    padding: 0;
 }
+
 #col1 {
     /*background-color: dodgerblue;*/
     /* height: 400px; */
@@ -112,6 +119,7 @@ li a {
     background: -o-linear-gradient(bottom right, #714ee3, #85d6d0); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom right, #714ee3, #85d6d0); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #714ee3, #85d6d0); /* Standard syntax */
+
 }
 
 #col2 {
@@ -135,6 +143,7 @@ li a {
     margin: auto;
     height: 510px;
 }
+
 .carousel-indicators {
     position: absolute;
     bottom: 10px;
@@ -161,14 +170,18 @@ li a {
     padding: 12px;
     font-weight: 100;
 }
+
 #page-2 {
-    margin: 100px auto;
-    background-color: lightcyan;
+    margin: 150px auto 50px;
+    padding-top: 50px;
+    /*background-color: lightcyan;*/
     color: black;
 }
-#page-2 .row:first-child{}
 
-#page-2 .row:last-child{
+#page-2 .row:first-child {
+}
+
+#page-2 .row:last-child {
     margin-top: 150px;
 
     height: 336px;
@@ -180,12 +193,13 @@ li a {
     background: -moz-linear-gradient(bottom right, #647cea, #7347a0); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #647cea, #7347a0); /* Standard syntax */
 }
-#page-2 .row:last-child .col-md-4{
+
+#page-2 .row:last-child .col-md-4 {
     margin-top: -150px;
     /*border: 1px solid dodgerblue;*/
 }
 
-.offer-block-one .number-bg{
+.offer-block-one .number-bg {
     display: inline-block;
     position: absolute;
     /*z-index: -1;*/
@@ -217,14 +231,17 @@ li a {
     color: ghostwhite;
     height: 480px;
 }
+
 .offer-block-one h2 {
     font-size: 15px;
     font-weight: 800;
 }
-#page-2 .row:last-child .col-md-4 .offer-block-one .content{
+
+#page-2 .row:last-child .col-md-4 .offer-block-one .content {
     z-index: 3;
     display: inline-block;
 }
+
 div.info-more {
     position: absolute;
     width: 30px;
@@ -240,6 +257,7 @@ div.info-more {
     bottom: 50px;
     font-size: 22px;
 }
+
 .offer-block-two {
     border: 2px solid deepskyblue;
     /*z-index: -2;*/
@@ -247,6 +265,7 @@ div.info-more {
     background-color: ghostwhite;
     height: 520px;
 }
+
 .points, #page-2 .col-md-8 p {
     margin: 50px 10px;
     height: 200px;
@@ -255,14 +274,91 @@ div.info-more {
     font-size: 16px;
     line-height: 1.5;
 }
-.points ul li{
+
+.points ul li {
     margin: 15px 0;
 }
-.offer-block-two h2{
+
+.offer-block-two h2 {
     font-size: 35px;
     font-weight: 100;
 }
+
 .offer-block-two .info-more {
     color: darkslateblue;
     border: 2px solid darkslateblue;
+}
+
+@media only screen and (min-device-width: 481px) {
+    #col1 {
+        transform: translateX(-100%);
+    }
+    #col2 {
+        transform: translateX(100%);
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation: portrait) {
+    #logo {
+        height: 6em;
+        padding: 11px 10px;
+    }
+
+    #logo p {
+        font-size: 12px;
+    }
+
+    #menu {
+        height: 5em;
+        margin: 0;
+        padding: 25px 0 0 78px;
+    }
+
+    #mobMenu {
+        display: block;
+        height: 30px;
+        width: 40px;
+        background-image: url(img/menu-button.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom right;
+        margin: 0;
+
+    }
+    #menu .row {
+        display: none;
+    }
+    .button {
+        margin: 260px 3%;
+    }
+    #col1 {
+        margin: 0;
+        padding: 20px;
+        height: 270px;
+        font-size: 10pt;
+        text-align: left;
+    }
+    #col1 .h1, h1 {
+        font-size: 28px;
+        font-weight: lighter;
+        text-align: left;
+    }
+    #col2 {
+        margin-top: -14px;
+    }
+    .carousel-inner {
+        height: 300px;
+    }
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        width: 100%;
+        margin: auto;
+        height: 400px;
+    }
+    #page-2 {
+        margin: 0 auto;
+    }
+    #page-2 .col-md-1 .line {
+        display: none;
+    }
+
 }
