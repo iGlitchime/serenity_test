@@ -145,15 +145,8 @@ li a {
 }
 
 .carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    z-index: 15;
-    width: 60%;
-    padding-left: 0;
     margin-left: -15%;
     text-align: right;
-    list-style: none;
 }
 
 /*----- end carousel --------*/
@@ -177,16 +170,9 @@ li a {
     /*background-color: lightcyan;*/
     color: black;
 }
-
-#page-2 .row:first-child {
-}
-
 #page-2 .row:last-child {
     margin-top: 150px;
-
     height: 336px;
-    /*border: 5px dashed red;*/
-
     background: -webkit-gradient(linear, left top, right bottom, from(#7347a0), to(#647cea));
     background: -webkit-linear-gradient(left top, #647cea, #7347a0); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom right, #647cea, #7347a0); /* For Opera 11.1 to 12.0 */
@@ -196,13 +182,12 @@ li a {
 
 #page-2 .row:last-child .col-md-4 {
     margin-top: -150px;
-    /*border: 1px solid dodgerblue;*/
 }
 
 .offer-block-one .number-bg {
     display: inline-block;
     position: absolute;
-    /*z-index: -1;*/
+    z-index: -1;
     top: 220px;
     left: 0;
     width: 105px;
@@ -356,9 +341,60 @@ div.info-more {
     }
     #page-2 {
         margin: 0 auto;
+        padding: 0;
     }
     #page-2 .col-md-1 .line {
         display: none;
+    }
+    /*.row .colorBG {*/
+        /*margin:0;*/
+        /*padding:0;*/
+        /*background: -webkit-gradient(linear, left top, right bottom, from(#7347a0), to(#647cea));*/
+        /*background: -webkit-linear-gradient(left top, #647cea, #7347a0); /!* For Safari 5.1 to 6.0 *!/*/
+        /*background: -o-linear-gradient(bottom right, #647cea, #7347a0); /!* For Opera 11.1 to 12.0 *!/*/
+        /*background: -moz-linear-gradient(bottom right, #647cea, #7347a0); /!* For Firefox 3.6 to 15 *!/*/
+        /*background: linear-gradient(to bottom right, #647cea, #7347a0); /!* Standard syntax *!/*/
+    /*}*/
+    #page-2 .carousel-inner {
+        height: 500px;
+        margin: -130px 0;
+    }
+    #page-2 .offer-block-one {
+         padding: 0;
+    }
+    #page-2 .row:last-child {
+        /*height: 336px;*/
+        margin-top: 130px;
+    }
+    #page-2 .carousel-indicators .active{
+        background-color: #f00;
+    }
+    #page-2 .carousel-indicators li {
+        border: 1px solid #999;
+    }
+    .carousel-indicators {
+        bottom: -40px;
+         left: 0;
+        z-index: 15;
+        margin-left: -5px;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    .offer-block-two {
+        border: 2px solid deepskyblue;
+        /* z-index: -2; */
+        padding: 30px;
+        background-color: ghostwhite;
+        height: 500px;
+    }
+    .offer-block-one h2 {
+        line-height: 2em;
+    }
+    p {
+        margin: 0 0 10px;
+        font-weight: 100;
+        line-height: 1.5em;
     }
 
 }
