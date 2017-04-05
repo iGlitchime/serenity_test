@@ -1,19 +1,18 @@
-html {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-    width: 100%;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext');
+
+@font-face {
+    font-family: 'Open Sans', sans-serif; /* Имя шрифта */
+    src: url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext');
 }
 
-body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: scroll;
+html, body {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
     color: white;
-    font-family: Helvetica, sans-serif, Regular, Arial;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 .row {
@@ -21,13 +20,13 @@ body {
 }
 
 #menu-line {
-    z-index: 1;
     padding: 0;
 }
 
 #logo {
-    height: 150px;
-    padding: 50px;
+    z-index: 2;
+    height: 135px;
+    padding: 35px 0 35px 70px;
     background: -webkit-gradient(linear, left top, right top, from(#2a5198), to(#603f97)); /* Safari 4-5, Chrome 1-9 */
     background: -webkit-linear-gradient(left, #603f97, #2a5198); /* Safari 5.1, Chrome 10+ */
     background: -moz-linear-gradient(left, #603f97, #2a5198); /* Firefox 3.6+ */
@@ -35,15 +34,20 @@ body {
     background: -o-linear-gradient(left, #603f97, #2a5198); /* Opera 11.10+ */
 }
 
-img {
+#logo img {
     float: left;
+    margin: 5px 5px;
 }
 
-img + p {
+#logo img + p {
     float: left;
-    font-size: 2em;
+    font-size: 22px;
     color: white;
-    margin: 0 10px;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    line-height: 55px;
+    margin-left: 5px;
 }
 
 #menu {
@@ -71,7 +75,7 @@ ul.links {
 ul.links li {
     display: inline;
     margin-right: 5px;
-    padding: 3px;
+    padding: 0;
 }
 
 ul.links li a {
@@ -119,7 +123,6 @@ li a {
     background: -o-linear-gradient(bottom right, #714ee3, #85d6d0); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom right, #714ee3, #85d6d0); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #714ee3, #85d6d0); /* Standard syntax */
-
 }
 
 #col2 {
@@ -127,50 +130,85 @@ li a {
     /*background-color: blueviolet;*/
     height: auto;
     padding: 0;
-    margin-top: -30px;
+    margin-top: -25px;
 }
 
-/*----- begin carousel --------*/
-#myCarousel {
+/* ----- SWIPER.js ----- */
+
+.swiper-container {
+    /*border: 2px solid red;*/
     width: 100%;
-    height: auto;
-    z-index: -10;
+    height: 100%;
+    z-index: 1;
 }
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide img {
+    float: left;
+    height: 100%;
     width: 100%;
-    margin: auto;
-    height: 510px;
 }
 
-.carousel-indicators {
-    margin-left: -15%;
-    text-align: right;
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    left: 70%;
+    width: 40%;
 }
 
-/*----- end carousel --------*/
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #cccccc;
+    opacity: .2;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: white;
+}
+
 .button {
     background: #16143b;
     position: absolute;
-    width: 300px;
+    width: 280px;
     height: 50px;
     color: white;
-    font-size: 14pt;
-    margin: 350px 470px;
-    z-index: 10;
+    font-size: 16px;
+    line-height: 50px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
     text-align: center;
-    padding: 12px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 #page-2 {
     margin: 150px auto 50px;
     padding-top: 50px;
-    /*background-color: lightcyan;*/
+    background-color: lightcyan;
     color: black;
 }
-#page-2 .row:last-child {
+
+#page-2 .row:nth-child(2) {
     margin-top: 150px;
     height: 336px;
     background: -webkit-gradient(linear, left top, right bottom, from(#7347a0), to(#647cea));
@@ -180,14 +218,13 @@ li a {
     background: linear-gradient(to bottom right, #647cea, #7347a0); /* Standard syntax */
 }
 
-#page-2 .row:last-child .col-md-4 {
+#page-2 .row:nth-child(2) .col-md-4 {
     margin-top: -150px;
 }
 
-.offer-block-one .number-bg {
+#page-2 .row:nth-child(2) .col-md-4 .number-bg {
     display: inline-block;
     position: absolute;
-    z-index: -1;
     top: 220px;
     left: 0;
     width: 105px;
@@ -213,13 +250,13 @@ li a {
     /*border: 1px solid #204d74;*/
     /*z-index: -2;*/
     padding: 30px;
-    color: ghostwhite;
+    color: white;
     height: 480px;
 }
 
 .offer-block-one h2 {
     font-size: 15px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 #page-2 .row:last-child .col-md-4 .offer-block-one .content {
@@ -274,48 +311,70 @@ div.info-more {
     border: 2px solid darkslateblue;
 }
 
+#page-2 div.content {
+    z-index: 5;
+}
+
 @media only screen and (min-device-width: 481px) {
     #col1 {
         transform: translateX(-100%);
     }
+
     #col2 {
         transform: translateX(100%);
     }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation: portrait) {
-    #logo {
-        height: 6em;
-        padding: 11px 10px;
-    }
 
-    #logo p {
-        font-size: 12px;
+    #logo {
+        height: 80px;
+        padding: 11px 13px;
+        width: 180px;
+    }
+    #logo img {
+        float: left;
+        margin: 10px 20px;
+        height: 35px;
+        width: 35px;
+    }
+    #logo img + p {
+        float: left;
+        font-size: 18px;
+        line-height: 50px;
+        color: white;
+        margin: 3px -9px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
     }
 
     #menu {
-        height: 5em;
+        height: 84px;
         margin: 0;
-        padding: 25px 0 0 78px;
+        padding: 23px 0px 40px 85px;
+        width: 140px;
     }
 
     #mobMenu {
         display: block;
-        height: 30px;
-        width: 40px;
+        height: 25px;
+        width: 25px;
+        z-index: 5;
         background-image: url(img/menu-button.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: bottom right;
         margin: 0;
-
     }
+
     #menu .row {
         display: none;
     }
+
     .button {
-        margin: 260px 3%;
+        margin: 230px 3%;
+        z-index: 5;
     }
+
     #col1 {
         margin: 0;
         padding: 20px;
@@ -323,78 +382,69 @@ div.info-more {
         font-size: 10pt;
         text-align: left;
     }
+
     #col1 .h1, h1 {
         font-size: 28px;
         font-weight: lighter;
         text-align: left;
     }
+
     #col2 {
-        margin-top: -14px;
+        margin-top: -10px;
     }
-    .carousel-inner {
-        height: 300px;
+    #col2 .swiper-slide{
+        width: 320px;
+        height: 246px;
     }
-    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-        width: 100%;
-        margin: auto;
-        height: 400px;
+    #page-1 .button {
+        background: #16143b;
+        position: absolute;
+        width: 280px;
+        height: 50px;
+        color: white;
+        font-size: 16px;
+        line-height: 50px;
+        font-family: 'Open Sans', sans-serif;
+        padding: 0;
+        text-align: center;
+        font-weight: 300;
     }
     #page-2 {
-        margin: 0 auto;
-        padding: 0;
+        margin: 0 auto 50px;
+        padding: 50px 0;
+        color: black;
     }
-    #page-2 .col-md-1 .line {
-        display: none;
-    }
-    /*.row .colorBG {*/
-        /*margin:0;*/
-        /*padding:0;*/
-        /*background: -webkit-gradient(linear, left top, right bottom, from(#7347a0), to(#647cea));*/
-        /*background: -webkit-linear-gradient(left top, #647cea, #7347a0); /!* For Safari 5.1 to 6.0 *!/*/
-        /*background: -o-linear-gradient(bottom right, #647cea, #7347a0); /!* For Opera 11.1 to 12.0 *!/*/
-        /*background: -moz-linear-gradient(bottom right, #647cea, #7347a0); /!* For Firefox 3.6 to 15 *!/*/
-        /*background: linear-gradient(to bottom right, #647cea, #7347a0); /!* Standard syntax *!/*/
-    /*}*/
-    #page-2 .carousel-inner {
-        height: 500px;
-        margin: -130px 0;
-    }
-    #page-2 .offer-block-one {
-         padding: 0;
-    }
+
     #page-2 .row:last-child {
-        /*height: 336px;*/
-        margin-top: 130px;
+        background: none;
+        margin: 0;
     }
-    #page-2 .carousel-indicators .active{
-        background-color: #f00;
-    }
-    #page-2 .carousel-indicators li {
-        border: 1px solid #999;
-    }
-    .carousel-indicators {
-        bottom: -40px;
-         left: 0;
-        z-index: 15;
-        margin-left: -5px;
+
+    .row .colorBG {
+        margin: 100px 0 0;
+        padding: 0;
+        height: 300px;
         width: 100%;
-        padding-left: 0;
+        position: absolute;
+        background: -webkit-gradient(linear, left top, right bottom, from(#7347a0), to(#647cea));
+        background: -webkit-linear-gradient(left top, #647cea, #7347a0);
+        background: -o-linear-gradient(bottom right, #647cea, #7347a0);
+        background: -moz-linear-gradient(bottom right, #647cea, #7347a0);
+        background: linear-gradient(to bottom right, #647cea, #7347a0);
+    }
+
+    #page-2 .row:last-child .swiper-container {
+        border: 2px solid green;
+        width: 90%;
+        height: 100%;
+        z-index: 10;
+        margin-top: 0px;
+    }
+
+    .swiper-slide {
         text-align: center;
-    }
-    .offer-block-two {
-        border: 2px solid deepskyblue;
-        /* z-index: -2; */
-        padding: 30px;
-        background-color: ghostwhite;
-        height: 500px;
-    }
-    .offer-block-one h2 {
-        line-height: 2em;
-    }
-    p {
-        margin: 0 0 10px;
-        font-weight: 100;
-        line-height: 1.5em;
+        font-size: 12px;
+        background: transparent;
     }
 
 }

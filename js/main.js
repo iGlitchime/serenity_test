@@ -13,8 +13,11 @@
 //    return false;
 //});
 
-$("#myCarousel").carousel();
-$("#xsCarousel").carousel(); //сократить загрузку, если не девайс
+//$("#myCarousel").carousel();
+//$("#xsCarousel").carousel(); //сократить загрузку, если не девайс
+
+
+
 
 /* ---- begin change block ---- */
 $(document).ready(function(){
