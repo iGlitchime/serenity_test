@@ -25,13 +25,14 @@ html, body {
 
 #logo {
     z-index: 2;
-    height: 135px;
+    height: 136px;
+    width: 292px;
     padding: 35px 0 35px 70px;
-    background: -webkit-gradient(linear, left top, right top, from(#2a5198), to(#603f97)); /* Safari 4-5, Chrome 1-9 */
-    background: -webkit-linear-gradient(left, #603f97, #2a5198); /* Safari 5.1, Chrome 10+ */
-    background: -moz-linear-gradient(left, #603f97, #2a5198); /* Firefox 3.6+ */
-    background: -ms-linear-gradient(left, #603f97, #2a5198); /* IE 10 */
-    background: -o-linear-gradient(left, #603f97, #2a5198); /* Opera 11.10+ */
+    background: -webkit-gradient(linear, left top, right top, from(#2a5198), to(#603f97));
+    background: -webkit-linear-gradient(left, #603f97, #2a5198);
+    background: -moz-linear-gradient(left, #603f97, #2a5198);
+    background: -ms-linear-gradient(left, #603f97, #2a5198);
+    background: -o-linear-gradient(left, #603f97, #2a5198);
 }
 
 #logo img {
@@ -51,16 +52,16 @@ html, body {
 }
 
 #menu {
-    height: 100px;
-    margin: 25px 0;
+    height: 108px;
+    margin: 10px 0 0;
     padding: 30px 0 20px;
     color: #ffffff;
     text-align: right;
-    background: -webkit-gradient(linear, left top, right top, from(#667ee9), to(#7458b4)); /* Safari 4-5, Chrome 1-9 */
-    background: -webkit-linear-gradient(left, #7458b4, #667ee9); /* Safari 5.1, Chrome 10+ */
-    background: -moz-linear-gradient(left, #7458b4, #667ee9); /* Firefox 3.6+ */
-    background: -ms-linear-gradient(left, #7458b4, #667ee9); /* IE 10 */
-    background: -o-linear-gradient(left, #7458b4, #667ee9); /* Opera 11.10+ */
+    background: -webkit-gradient(linear, left top, right top, from(#667ee9), to(#7458b4));
+    background: -webkit-linear-gradient(left, #7458b4, #667ee9);
+    background: -moz-linear-gradient(left, #7458b4, #667ee9);
+    background: -ms-linear-gradient(left, #7458b4, #667ee9);
+    background: -o-linear-gradient(left, #7458b4, #667ee9);
 }
 
 .mob-menu {
@@ -68,15 +69,16 @@ html, body {
 }
 
 ul.links {
-    margin: 0; /* Обнуляем значение отступов */
-    padding: 4px; /* Значение полей */
+    margin: 0;
+    padding: 13px 87px 13px 0;
 }
 
 ul.links li {
-    display: inline;
-    margin-right: 5px;
+    display: inline-block;
+    margin-right: 24px;
     padding: 0;
 }
+
 
 ul.links li a {
     color: white;
@@ -86,51 +88,79 @@ ul.links li a:active, ul.links li a:hover {
     border-top: 1px solid #ffffff;
     text-decoration: none;
 }
-
-.contacts p:first-child {
-    font-size: 20px;
-    font-weight: bold;
+div.contacts{
+    padding: 0;
+    margin-left: 14px;
 }
+.contacts p:first-child {
+    padding: 8px 1px 0 55px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.contacts p:last-child {
+    margin: -11px 4px 10px;
+}
+div.lang {
+    padding: 0;
+    width: 84px;
+    margin-left: 10px;
+}
+div.lang ul{
+    padding: 0;
+    margin: 12px 3px;
 
+}
 div.lang li {
-    display: inline;
+    display: inline-block;
     color: white;
+    margin: 0 3px;
 }
 
 div.lang li a.active {
     border: 1px solid #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    padding: 0 5px;
 }
 
 li a {
-    color: white
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
 }
 
 #page-1 {
-    /*height: 100px;*/
-    /*width: 100%;*/
     text-align: right;
     padding: 0;
 }
 
 #col1 {
-    /*background-color: dodgerblue;*/
-    /* height: 400px; */
+    height: 630px;
     z-index: -1;
-    margin: -155px 0;
-    padding: 200px 30px;
+    margin: -170px 0;
+    padding: 200px 50px;
     background: -webkit-gradient(linear, left top, right bottom, from(#85d6d0), to(#714ee3));
     background: -webkit-linear-gradient(left top, #714ee3, #85d6d0); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom right, #714ee3, #85d6d0); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom right, #714ee3, #85d6d0); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #714ee3, #85d6d0); /* Standard syntax */
 }
-
+#col1 .h1, #col1 h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 42px;
+    line-height: 1.15;
+}
+#col1 p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 1.45;
+}
 #col2 {
-    /*top: 120px;*/
-    /*background-color: blueviolet;*/
     height: auto;
     padding: 0;
-    margin-top: -25px;
+    margin-top: -18px;
 }
 
 /* ----- SWIPER.js ----- */
@@ -142,7 +172,7 @@ li a {
     z-index: 1;
 }
 
-.swiper-slide {
+#col2 .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -161,6 +191,9 @@ li a {
     align-items: center;
 }
 
+#col2 .swiper-slide {
+    height: 525px !important;
+}
 .swiper-container .swiper-wrapper .swiper-slide img {
     float: left;
     height: 100%;
@@ -168,9 +201,10 @@ li a {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom: 10px;
-    left: 70%;
-    width: 40%;
+
+    left: 80%;
+    width: 20%;
+    height: 23px;
 }
 
 .swiper-pagination-bullet {
@@ -178,8 +212,8 @@ li a {
     height: 8px;
     display: inline-block;
     border-radius: 100%;
-    background: #cccccc;
-    opacity: .2;
+    background: white;
+    opacity: .5;
 }
 
 .swiper-pagination-bullet-active {
@@ -190,23 +224,35 @@ li a {
 .button {
     background: #16143b;
     position: absolute;
-    width: 280px;
-    height: 50px;
+    top: 497px;
+    left: 471px;
+    width: 273px;
+    height: 49px;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 50px;
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     text-align: center;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 #page-2 {
     margin: 150px auto 50px;
-    padding-top: 50px;
-    background-color: lightcyan;
-    color: black;
+    /*padding-top: 50px;*/
+    /*background-color: lightcyan;*/
+    color: darkslateblue;
 }
+#page-2 .h1, #page-2 h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 42px;
+    line-height: 1.15;
+}
+#page-2 .row:first-child{
+    margin: -13px 0 0 91px;
+}
+
 
 #page-2 .row:nth-child(2) {
     margin-top: 150px;
