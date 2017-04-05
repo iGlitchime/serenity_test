@@ -79,7 +79,6 @@ ul.links li {
     padding: 0;
 }
 
-
 ul.links li a {
     color: white;
 }
@@ -88,28 +87,34 @@ ul.links li a:active, ul.links li a:hover {
     border-top: 1px solid #ffffff;
     text-decoration: none;
 }
-div.contacts{
+
+div.contacts {
     padding: 0;
     margin-left: 14px;
 }
+
 .contacts p:first-child {
     padding: 8px 1px 0 55px;
     font-size: 18px;
     font-weight: 300;
 }
+
 .contacts p:last-child {
     margin: -11px 4px 10px;
 }
+
 div.lang {
     padding: 0;
     width: 84px;
     margin-left: 10px;
 }
-div.lang ul{
+
+div.lang ul {
     padding: 0;
     margin: 12px 3px;
 
 }
+
 div.lang li {
     display: inline-block;
     color: white;
@@ -145,18 +150,21 @@ li a {
     background: -moz-linear-gradient(bottom right, #714ee3, #85d6d0); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, #714ee3, #85d6d0); /* Standard syntax */
 }
+
 #col1 .h1, #col1 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     font-size: 42px;
     line-height: 1.15;
 }
+
 #col1 p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     font-size: 16px;
     line-height: 1.45;
 }
+
 #col2 {
     height: auto;
     padding: 0;
@@ -194,6 +202,7 @@ li a {
 #col2 .swiper-slide {
     height: 525px !important;
 }
+
 .swiper-container .swiper-wrapper .swiper-slide img {
     float: left;
     height: 100%;
@@ -222,12 +231,14 @@ li a {
 }
 
 .button {
-    background: #16143b;
     position: absolute;
     top: 497px;
-    left: 471px;
-    width: 273px;
+    width: 1180px;
     height: 49px;
+}
+
+.button p {
+    background: #16143b;
     color: white;
     font-size: 14px;
     line-height: 50px;
@@ -235,7 +246,11 @@ li a {
     padding: 0;
     text-align: center;
     font-weight: 200;
+    width: 270px;
+    margin: 0 auto;
 }
+
+
 
 #page-2 {
     margin: 150px auto 50px;
@@ -243,20 +258,33 @@ li a {
     /*background-color: lightcyan;*/
     color: darkslateblue;
 }
+#page-2 .row .col-md-6 {
+    height: 130px;
+    padding: 42px 62px 0;
+    line-height: 1.75;
+}
+#page-2 .line {
+    width: 100px;
+    height: 1px;
+    margin: 57px -5px;
+    border-top: 1px solid dimgray;
+}
+
 #page-2 .h1, #page-2 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     font-size: 42px;
     line-height: 1.15;
 }
-#page-2 .row:first-child{
+
+#page-2 .row:first-child {
     margin: -13px 0 0 91px;
 }
 
-
 #page-2 .row:nth-child(2) {
-    margin-top: 150px;
-    height: 336px;
+    margin: 172px 0 0 -15px;
+    height: 390px;
+    width: 1170px;
     background: -webkit-gradient(linear, left top, right bottom, from(#7347a0), to(#647cea));
     background: -webkit-linear-gradient(left top, #647cea, #7347a0); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(bottom right, #647cea, #7347a0); /* For Opera 11.1 to 12.0 */
@@ -264,19 +292,24 @@ li a {
     background: linear-gradient(to bottom right, #647cea, #7347a0); /* Standard syntax */
 }
 
-#page-2 .row:nth-child(2) .col-md-4 {
-    margin-top: -150px;
+#page-2 .row:nth-child(2) .col-md-4:first-child {
+    margin-top: -97px;
+    padding: 0 0 0 39px;
+}
+#page-2 .row:nth-child(2) .col-md-4:nth-child(2) {
+    margin-top: -97px;
+    padding: 0 0 0 19px;
 }
 
 #page-2 .row:nth-child(2) .col-md-4 .number-bg {
     display: inline-block;
     position: absolute;
-    top: 220px;
-    left: 0;
+    top: 182px;
+    left: 40px;
     width: 105px;
-    height: 175px;
+    height: 200px;
     font-weight: 100;
-    font-size: 100pt;
+    font-size: 133px;
 
     background: -webkit-gradient(linear, left top, right bottom, from(#81b0d2), to(#746bd7));
     background: -webkit-linear-gradient(left top, #746bd7, #81b0d2); /* For Safari 5.1 to 6.0 */
@@ -293,11 +326,16 @@ li a {
 }
 
 .offer-block-one {
-    /*border: 1px solid #204d74;*/
-    /*z-index: -2;*/
-    padding: 30px;
     color: white;
     height: 480px;
+    width: 351px;
+}
+
+
+.offer-block-one img {
+    width: 351px !important;
+    height: 196px !important;
+    margin: 0;
 }
 
 .offer-block-one h2 {
@@ -317,7 +355,7 @@ div.info-more {
     border: 2px solid white;
     border-radius: 25px;
     background: transparent;
-    margin: 0 30%;
+    margin: -9px 160px;
     text-decoration: none;
     color: white;
     text-align: center;
@@ -358,7 +396,9 @@ div.info-more {
 }
 
 #page-2 div.content {
+    height: 180px;
     z-index: 5;
+    margin: 64px 40px 21px;
 }
 
 @media only screen and (min-device-width: 481px) {
@@ -378,12 +418,14 @@ div.info-more {
         padding: 11px 13px;
         width: 180px;
     }
+
     #logo img {
         float: left;
         margin: 10px 20px;
         height: 35px;
         width: 35px;
     }
+
     #logo img + p {
         float: left;
         font-size: 18px;
@@ -438,10 +480,12 @@ div.info-more {
     #col2 {
         margin-top: -10px;
     }
-    #col2 .swiper-slide{
+
+    #col2 .swiper-slide {
         width: 320px;
         height: 246px;
     }
+
     #page-1 .button {
         background: #16143b;
         position: absolute;
@@ -455,6 +499,7 @@ div.info-more {
         text-align: center;
         font-weight: 300;
     }
+
     #page-2 {
         margin: 0 auto 50px;
         padding: 50px 0;
