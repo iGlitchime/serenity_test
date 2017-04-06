@@ -250,19 +250,19 @@ li a {
     margin: 0 auto;
 }
 
-
-
 #page-2 {
     margin: 150px auto 50px;
     /*padding-top: 50px;*/
     /*background-color: lightcyan;*/
     color: darkslateblue;
 }
+
 #page-2 .row .col-md-6 {
     height: 130px;
     padding: 42px 62px 0;
     line-height: 1.75;
 }
+
 #page-2 .line {
     width: 100px;
     height: 1px;
@@ -296,14 +296,17 @@ li a {
     margin-top: -97px;
     padding: 0 0 0 39px;
 }
+
 #page-2 .row:nth-child(2) .col-md-4:nth-child(2) {
     margin-top: -97px;
     padding: 0 0 0 19px;
 }
+
 #page-2 .row:nth-child(2) .col-md-4:last-child {
     margin: -97px 0 0 0;
     padding: 0;
 }
+
 #page-2 .row:nth-child(2) .col-md-4 .number-bg {
     display: inline-block;
     position: absolute;
@@ -421,6 +424,10 @@ div.info-more {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) and (orientation: portrait) {
 
+    body, html {
+        overflow-x: hidden;
+    }
+
     #logo {
         height: 80px;
         padding: 11px 13px;
@@ -447,7 +454,7 @@ div.info-more {
     #menu {
         height: 84px;
         margin: 0;
-        padding: 23px 0px 40px 85px;
+        padding: 23px 0 40px 95px;
         width: 140px;
     }
 
@@ -466,38 +473,10 @@ div.info-more {
         display: none;
     }
 
-    .button {
-        margin: 230px 3%;
-        z-index: 5;
-    }
-
-    #col1 {
-        margin: 0;
-        padding: 20px;
-        height: 270px;
-        font-size: 10pt;
-        text-align: left;
-    }
-
-    #col1 .h1, h1 {
-        font-size: 28px;
-        font-weight: lighter;
-        text-align: left;
-    }
-
-    #col2 {
-        margin-top: -10px;
-    }
-
-    #col2 .swiper-slide {
-        width: 320px;
-        height: 246px;
-    }
-
     #page-1 .button {
         background: #16143b;
         position: absolute;
-        width: 280px;
+        width: 291px;
         height: 50px;
         color: white;
         font-size: 16px;
@@ -506,6 +485,48 @@ div.info-more {
         padding: 0;
         text-align: center;
         font-weight: 300;
+        top: 80px;
+        margin: 230px 3%;
+        z-index: 5;
+    }
+
+    #col1 {
+        margin: 0;
+        padding: 20px;
+        height: 340px;
+        font-size: 10pt;
+        text-align: left;
+    }
+
+    #col1 .h1, #col1 h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+        font-size: 30px;
+        line-height: 1.2;
+        margin-top: 38px;
+        text-align: left;
+    }
+    #col1 p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+        font-size: 15px;
+        line-height: 1.45;
+        margin: 0;
+        padding: 12px 0 0 0px;
+    }
+
+    #col2 {
+        margin-top: -14px;
+    }
+
+    #col2 .swiper-slide {
+        height: 260px !important;
+    }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        height: 23px;
+        top: 24px;
+        width: 80px;
     }
 
     #page-2 {
