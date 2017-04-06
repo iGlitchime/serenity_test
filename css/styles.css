@@ -342,7 +342,7 @@ li a {
 }
 
 .offer-block-one img {
-    width: 351px !important;
+    width: 296px !important;
     height: 196px !important;
     margin: 0;
 }
@@ -351,6 +351,7 @@ li a {
     font-size: 15px;
     font-weight: 700;
 }
+
 
 #page-2 .row:last-child .col-md-4 .offer-block-one .content {
     z-index: 3;
@@ -476,7 +477,7 @@ div.info-more {
     #page-1 .button {
         background: #16143b;
         position: absolute;
-        width: 291px;
+        width: 279px;
         height: 50px;
         color: white;
         font-size: 16px;
@@ -486,8 +487,21 @@ div.info-more {
         text-align: center;
         font-weight: 300;
         top: 80px;
-        margin: 230px 3%;
+        margin: 230px 20px;
         z-index: 5;
+    }
+
+    #page-1 .button p {
+        background: #16143b;
+        color: white;
+        font-size: 14px;
+        line-height: 50px;
+        font-family: 'Open Sans', sans-serif;
+        padding: 0;
+        text-align: center;
+        font-weight: 200;
+        width: 280px;
+        margin: 0;
     }
 
     #col1 {
@@ -506,6 +520,7 @@ div.info-more {
         margin-top: 38px;
         text-align: left;
     }
+
     #col1 p {
         font-family: 'Open Sans', sans-serif;
         font-weight: 100;
@@ -527,23 +542,53 @@ div.info-more {
         height: 23px;
         top: 24px;
         width: 80px;
+        left: 124px;
     }
 
     #page-2 {
         margin: 0 auto 50px;
-        padding: 50px 0;
+        padding: 0;
         color: black;
     }
 
-    #page-2 .row:last-child {
-        background: none;
+    #page-2 .row:first-child {
+        height: 120px;
         margin: 0;
     }
 
+    #page-2 .h1, #page-2 h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+        font-size: 30px;
+        line-height: 1.15;
+        padding: 43px 5px 0;
+        margin: 0;
+    }
+
+    #page-2 .row .col-md-6 {
+        height: 130px;
+        padding: 0 20px;
+        line-height: 1.25;
+        margin: 130px 0 0;
+    }
+
+    #page-2 .row:nth-child(3) {
+        margin: 120px 0 0 0;
+    }
+
+    #page-2 .row .col-md-6 p {
+        padding: 5px 0;
+        line-height: 1.48;
+    }
+
+    /*#page-2 .row:last-child {*/
+    /*background: none;*/
+    /*margin: 0;*/
+    /*}*/
     .row .colorBG {
         margin: 100px 0 0;
         padding: 0;
-        height: 300px;
+        height: 330px;
         width: 100%;
         position: absolute;
         background: -webkit-gradient(linear, left top, right bottom, from(#7347a0), to(#647cea));
@@ -555,16 +600,53 @@ div.info-more {
 
     #page-2 .row:last-child .swiper-container {
         border: 2px solid green;
-        width: 90%;
-        height: 100%;
+        width: 300px;
+        height: 480px;
         z-index: 10;
-        margin-top: 0px;
+        margin: 0 10px;
     }
 
-    .swiper-slide {
+    .offer-block-two {
+        border: 2px solid deepskyblue;
+        padding: 0;
+        background-color: ghostwhite;
+        height: 480px;
+        width: 300px;
+        margin-top: -2px;
+    }
+
+    #page-2 .swiper-slide {
         text-align: center;
         font-size: 12px;
         background: transparent;
+        margin: 0 -2px 0 0;
+        width: 300px !important;
     }
+
+    .points, #page-2 .col-md-8 p {
+        margin: 9px -5px;
+        height: 246px;
+        overflow-y: scroll;
+        color: lightslategrey;
+        font-size: 14px;
+        line-height: 1.6;
+        width: 296px;
+        text-align: left;
+    }
+    .offer-block-two h2 {
+        font-size: 28px;
+        font-weight: 100;
+        height: 130px;
+        padding: 21px 100px 0 16px;
+        text-align: left;
+        line-height: 1.25;
+    }
+    .offer-block-two .info-more {
+        color: darkslateblue;
+        border: 3px solid darkslateblue;
+        margin: -21px 131px;
+    }
+
+
 
 }
