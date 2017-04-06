@@ -300,7 +300,10 @@ li a {
     margin-top: -97px;
     padding: 0 0 0 19px;
 }
-
+#page-2 .row:nth-child(2) .col-md-4:last-child {
+    margin: -97px 0 0 0;
+    padding: 0;
+}
 #page-2 .row:nth-child(2) .col-md-4 .number-bg {
     display: inline-block;
     position: absolute;
@@ -320,6 +323,10 @@ li a {
     -webkit-text-fill-color: transparent;
 }
 
+#page-2 .row:nth-child(2) .col-md-4:last-child .number-bg {
+    left: 0px;
+}
+
 .hidden {
     display: none;
     visibility: hidden;
@@ -328,9 +335,8 @@ li a {
 .offer-block-one {
     color: white;
     height: 480px;
-    width: 351px;
+    width: 350px;
 }
-
 
 .offer-block-one img {
     width: 351px !important;
@@ -366,19 +372,20 @@ div.info-more {
 
 .offer-block-two {
     border: 2px solid deepskyblue;
-    /*z-index: -2;*/
-    padding: 30px;
+    padding: 55px 37px;
     background-color: ghostwhite;
-    height: 520px;
+    height: 547px;
+    width: 352px;
+    margin-top: -30px;
 }
 
 .points, #page-2 .col-md-8 p {
-    margin: 50px 10px;
-    height: 200px;
+    margin: 13px -23px;
+    height: 246px;
     overflow-y: scroll;
     color: lightslategrey;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .points ul li {
@@ -392,7 +399,8 @@ div.info-more {
 
 .offer-block-two .info-more {
     color: darkslateblue;
-    border: 2px solid darkslateblue;
+    border: 3px solid darkslateblue;
+    margin: -10px 121px;
 }
 
 #page-2 div.content {
