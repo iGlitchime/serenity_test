@@ -29,9 +29,14 @@ $(document).ready(function() {
     });
 
     $("#mobMenu, #closeMenu").click(function(){
+        var menuFullscreen = document.getElementById('#menuFullscreen');
+        if(menuFullscreen.style.opacity > 0){
+            menuFullscreen.style.opacity =0;
+        } else{
+            menuFullscreen.style.opacity = 1;
+        }
+
         $('#menuFullscreen').toggleClass('hide');
     });
 
-
-
-})
+});
